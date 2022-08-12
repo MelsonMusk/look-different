@@ -1,0 +1,147 @@
+.cloud-function-log-panel {
+  .cloud-function-log-back {
+    background-color: #fff;
+    box-shadow: rgb(197, 217, 232) 0 0 4px 0;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    padding: 32px 20px 0;
+  }
+
+  .title {
+    font-size: 18px;
+    color: #2C405A;
+    line-height: 18px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+
+  .sub-title {
+    font-size: 16px;
+    color: #3F536E;
+    line-height: 16px;
+    font-weight: bold;
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+
+  .expiry {
+    float: right;
+  }
+
+  .date-picker {
+    margin-bottom: 20px;
+    width: 85%;
+  }
+
+  .content-wrapper {
+    position: relative;
+    min-height: 800px;
+  }
+
+  .sidebar {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+
+    .log-list {
+      font-size: 14px;
+      color: #3F536E;
+      overflow-y: auto;
+      margin: 0 -16px;
+
+      .log-disabled {
+        color: #8DABC4;
+        padding-left: 16px;
+      }
+
+      .log {
+        cursor: pointer;
+        line-height: 32px;
+        color: #8DABC4;
+        border-left: 4px solid transparent;
+        padding-left: 16px;
+
+        &:hover {
+          color: #128BF8;
+          border-left-color: #128BF8;
+        }
+      }
+
+      .active-log {
+        @extend .log;
+        color: #128BF8;
+      }
+
+      .load-more-tips {
+        @extend .log;
+        font-size: 12px;
+      }
+
+      .spin-wrapper {
+        position: relative;
+        width: 50%;
+        height: 40px;
+      }
+    }
+  }
+
+  .log-content {
+    .function-name {
+      font-size: 16px;
+      color: #2C405A;
+      line-height: 16px;
+      font-weight: bold;
+      margin-bottom: 32px;
+    }
+
+    .overview {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 50px;
+      font-size: 14px;
+
+      .sub-title {
+        margin-top: 0;
+      }
+    }
+
+    .res-title {
+      margin-bottom: 20px;
+    }
+
+    .res-block {
+      display: block;
+      background: #F3FBFF;
+      border-left: 4px solid #82D4FF;
+      margin-bottom: 10px;
+      padding: 20px 30px;
+      flex: 1;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+  }
+
+  .filter-btn {
+    float: right;
+    margin-left: 8px;
+  }
+
+  .flex-wrapper {
+    display: flex;
+
+    .sidebar {
+      width: 200px;
+      margin-right: 10px;
+
+      .sub-title {
+        font-size: 14px;
+        font-weight: normal;
+      }
+    }
+
+    .log-detail-panel {
+      flex: 1;
+    }
+  }
+}
